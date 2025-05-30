@@ -1,0 +1,14 @@
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\bin\Debug\net8.0\LivrariaControleEmprestimo.DATA.deps.json
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\bin\Debug\net8.0\LivrariaControleEmprestimo.DATA.dll
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\bin\Debug\net8.0\LivrariaControleEmprestimo.DATA.pdb
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\LivrariaControleEmprestimo.DATA.csproj.AssemblyReference.cache
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\LivrariaControleEmprestimo.DATA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\LivrariaControleEmprestimo.DATA.AssemblyInfoInputs.cache
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\LivrariaControleEmprestimo.DATA.AssemblyInfo.cs
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\LivrariaControleEmprestimo.DATA.csproj.CoreCompileInputs.cache
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\LivrariaControleEmprestimo.DATA.dll
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\refint\LivrariaControleEmprestimo.DATA.dll
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\LivrariaControleEmprestimo.DATA.pdb
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\ref\LivrariaControleEmprestimo.DATA.dll
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\bin\Debug\net8.0\LivrariaControleEmprestimo.DATA.runtimeconfig.json
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\LivrariaControleEmprestimo.DATA.genruntimeconfig.cache
