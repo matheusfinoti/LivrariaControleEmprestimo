@@ -1,29 +1,31 @@
-﻿@model IEnumerable<LivrariaControleEmprestimo.DATA.Models.Cliente>
+﻿@model IEnumerable<LivrariaControleEmprestimo.DATA.Models.Livro>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Clientes</h1>
+<h1>Livros</h1>
 
 <p>
-    <a class="btn btn-primary" asp-action="Create">Novo usuário</a>
+    <a class="btn btn-primary" asp-action="Create">Novo Livro</a>
 </p>
 <table id="myTable" class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CliCpf)
+                @Html.DisplayNameFor(model => model.LivroNome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CliNome)
-            </th>
-
-            <th>
-                @Html.DisplayNameFor(model => model.CliTelefoneCelular)
+                @Html.DisplayNameFor(model => model.LivroAutor)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CliTelefoneFixo)
+                @Html.DisplayNameFor(model => model.LivroEditora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LivroAnoPublicacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LivroEdicao)
             </th>
             <th></th>
         </tr>
@@ -33,17 +35,19 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CliCpf)
+                    @Html.DisplayFor(modelItem => item.LivroNome)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CliNome)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.CliTelefoneCelular)
+                    @Html.DisplayFor(modelItem => item.LivroAutor)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CliTelefoneFixo)
+                    @Html.DisplayFor(modelItem => item.LivroEditora)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LivroAnoPublicacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LivroEdicao)
                 </td>
                 <td>
                     <a class="btn btn-success p-1" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
@@ -65,7 +69,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    Deseja realmente excluir o cliente @item.CliNome?
+                                    Deseja realmente excluir o livro @item.LivroNome?
                                 </div>
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Não</button>

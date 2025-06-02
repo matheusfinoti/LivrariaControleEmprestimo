@@ -18,26 +18,32 @@ public partial class Livro
     [Column("livroNome")]
     [StringLength(50)]
     [Unicode(false)]
+    [Display(Name = "Nome")]
     public string LivroNome { get; set; }
 
     [Required]
     [Column("livroAutor")]
     [StringLength(200)]
     [Unicode(false)]
+    [Display(Name = "Autor")]
     public string LivroAutor { get; set; }
 
     [Required]
     [Column("livroEditora")]
     [StringLength(100)]
     [Unicode(false)]
+    [Display(Name = "Editora")]
     public string LivroEditora { get; set; }
 
     [Column("livroAnoPublicacao", TypeName = "datetime")]
+    [Display(Name = "Ano Publicação")]
     public DateTime LivroAnoPublicacao { get; set; }
 
     [Column("livroEdicao")]
     [StringLength(50)]
     [Unicode(false)]
+    [Display(Name = "Edição")]
+
     public string LivroEdicao { get; set; }
 
     [InverseProperty("LceIdLivroNavigation")]

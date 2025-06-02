@@ -33,10 +33,14 @@ namespace LivrariaControleEmprestimo.WEB.Controllers
 
 
         [HttpGet]
-        public IActionResult Edit(int id)
+        public IActionResult Edit(int? id)
         {
-            Cliente oCliente = oClienteService.oRepositoryCliente.SelecionarPk(id);
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            Cliente oCliente = oClienteService.oRepositoryCliente.SelecionarPk(id);
 
             return View(oCliente);
         }

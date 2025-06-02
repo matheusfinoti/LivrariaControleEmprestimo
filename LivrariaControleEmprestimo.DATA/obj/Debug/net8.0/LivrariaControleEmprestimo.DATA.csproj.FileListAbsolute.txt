@@ -12,3 +12,4 @@ C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaContr
 C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\ref\LivrariaControleEmprestimo.DATA.dll
 C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\bin\Debug\net8.0\LivrariaControleEmprestimo.DATA.runtimeconfig.json
 C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\LivrariaControleEmprestimo.DATA.genruntimeconfig.cache
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.DATA\obj\Debug\net8.0\LivrariaControleEmprestimo.DATA.sourcelink.json
