@@ -29,7 +29,6 @@ public partial class VwLivroClienteEmprestimo
     [Unicode(false)]
     public string LivroNome { get; set; }
 
-    [Key]
     [Column("id")]
     public int Id { get; set; }
 
