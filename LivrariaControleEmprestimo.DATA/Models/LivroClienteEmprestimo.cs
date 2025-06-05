@@ -19,11 +19,15 @@ public partial class LivroClienteEmprestimo
     public int? LceIdLivro { get; set; }
 
     [Column(TypeName = "datetime")]
+    [Display(Name = "Data Empréstimo")]
     public DateTime? LceDataEmprestimo { get; set; }
 
     [Column(TypeName = "datetime")]
+    [Display(Name = "Data Entrega")]
     public DateTime? LceDataEntrega { get; set; }
 
+
+    [Display(Name = "Entregue?")]
     public bool? LceEntregue { get; set; }
 
     [ForeignKey("LceIdCliente")]

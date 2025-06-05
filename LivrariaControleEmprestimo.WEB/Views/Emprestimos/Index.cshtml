@@ -1,0 +1,96 @@
+﻿@model IEnumerable<LivrariaControleEmprestimo.DATA.Models.VwLivroClienteEmprestimo>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Empréstimos</h1>
+<hr />
+
+<table id="myTable" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LceDataEmprestimo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LceDataEntrega)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CliNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LivroNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LceEntregue)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LceDataEmprestimo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LceDataEntrega)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CliNome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LivroNome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LceEntregue)
+                </td>
+                <td>
+                    <a class="btn btn-success p-1" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a class="btn btn-primary p-1" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger p-1" data-toggle="modal" data-target="#DeleteModal-@item.Id">
+                        Excluir
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="DeleteModal-@item.Id" tabindex="-1" role="dialog" aria-labelledby="DeleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="DeleteModalLabel">Excluir cliente</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Deseja realmente excluir o cliente @item.CliNome?
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Não</button>
+                                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Sim</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        let table = new DataTable('#myTable', {
+            language: {
+                url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json"
+            }
+        });
+    </script>
+}

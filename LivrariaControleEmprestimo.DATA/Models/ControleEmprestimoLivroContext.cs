@@ -40,6 +40,7 @@ public partial class ControleEmprestimoLivroContext : DbContext
 
         modelBuilder.Entity<VwLivroClienteEmprestimo>(entity =>
         {
+            entity.HasNoKey();
             entity.ToView("VW_LivroClienteEmprestimo");
         });
 

@@ -18,7 +18,7 @@ public partial class Livro
     [Column("livroNome")]
     [StringLength(50)]
     [Unicode(false)]
-    [Display(Name = "Nome")]
+    [Display(Name = "Nome Livro")]
     public string LivroNome { get; set; }
 
     [Required]

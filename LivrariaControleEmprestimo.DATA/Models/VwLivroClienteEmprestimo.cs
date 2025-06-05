@@ -15,18 +15,22 @@ public partial class VwLivroClienteEmprestimo
     [Column("cliCPF")]
     [StringLength(14)]
     [Unicode(false)]
+    [Display(Name = "CPF")]
+
     public string CliCpf { get; set; }
 
     [Required]
     [Column("cliNome")]
     [StringLength(200)]
     [Unicode(false)]
+    [Display(Name = "Nome Cliente")]
     public string CliNome { get; set; }
 
     [Required]
     [Column("livroNome")]
     [StringLength(50)]
     [Unicode(false)]
+    [Display(Name = "Nome Livro")]
     public string LivroNome { get; set; }
 
     [Column("id")]
@@ -37,10 +41,13 @@ public partial class VwLivroClienteEmprestimo
     public int? LceIdLivro { get; set; }
 
     [Column(TypeName = "datetime")]
+    [Display(Name = "Data Empréstimo")]
     public DateTime? LceDataEmprestimo { get; set; }
 
     [Column(TypeName = "datetime")]
+    [Display(Name = "Data Entrega")]
     public DateTime? LceDataEntrega { get; set; }
 
+    [Display(Name = "Entregue?")]
     public bool? LceEntregue { get; set; }
 }

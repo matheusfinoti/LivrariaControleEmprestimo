@@ -26,7 +26,7 @@ public partial class Cliente
     [Column("cliNome")]
     [StringLength(200)]
     [Unicode(false)]
-    [Display(Name = "Nome")]
+    [Display(Name = "Nome Cliente")]
     public string CliNome { get; set; }
 
     [Required]
