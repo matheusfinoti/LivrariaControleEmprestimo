@@ -6,8 +6,11 @@
 }
 
 <h1>Empréstimos</h1>
-
-<input class="btn btn-primary" type="button" value="Novo empréstimo" />
+<br />
+<p>
+    <a class="btn btn-primary" type="button" value="Novo empréstimo" asp-action="Create">Novo empréstimo</a>
+</p>
+<br />
 
 <table id="myTable" class="table">
     <thead>
@@ -17,6 +20,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.LceDataEntrega)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CliCpf)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CliNome)
@@ -40,6 +46,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.LceDataEntrega)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CliCpf)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.CliNome)

@@ -9,11 +9,14 @@
 <div class="row">
     <div class="col-md">
         <form asp-action="Details" method="post">
+            <h4>Cliente</h4>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="mb-1">
-                <a class="btn btn-success mt-1" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
-                <a class="btn btn-dark mt-1" asp-action="Index">Voltar</a>
+            <br />
+            <div>
+                <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
+                <a class="btn btn-dark" asp-action="Index">Voltar</a>
             </div>
+            <br />
             <div class="card">
                 <div class="card-header">Informações Pessoais</div>
                 <div class="card-body">

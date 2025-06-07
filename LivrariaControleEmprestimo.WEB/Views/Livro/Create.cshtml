@@ -4,16 +4,17 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Novo registro</h1>
 
 <h4>Livro</h4>
 <hr />
 <div class="row">
     <div class="col-md">
         <form asp-action="Create">
-            <div class="mb-1">
-                <a class="form-group btn btn-dark mb-1" asp-action="Index">Voltar</a>
+            <div>
+                <a class="form-group btn btn-dark" asp-action="Index">Voltar</a>
             </div>
+            <br />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="card">
                 <div class="card-header">Informações</div>
@@ -47,7 +48,7 @@
                     </div>
                 </div>
             </div>
-
+            <br />
             <div class="form-group mt-1">
                 <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
