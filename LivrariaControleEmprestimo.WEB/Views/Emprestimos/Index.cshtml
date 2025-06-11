@@ -41,10 +41,22 @@
         @foreach (var item in Model)
         {
             <tr>
+                @{
+                    var styleStatus = "text-white bg-success";
+                    if (DateTime.Now.Date > item.LceDataEmprestimo)
+                    {
+                        styleStatus = "text-white bg-danger";
+                    }
+                    else if (DateTime.Now.Date.Equals(item.LceDataEntrega))
+                    {
+                        styleStatus = "bg-warning";
+                    }
+                }
                 <td>
                     @Html.DisplayFor(modelItem => item.LceDataEmprestimo)
                 </td>
-                <td>
+                <td class="@styleStatus">
+
                     @Html.DisplayFor(modelItem => item.LceDataEntrega)
                 </td>
                 <td>
