@@ -8,7 +8,6 @@
 
 <h4>Empréstimo</h4>
 <hr />
-
 <div class="row">
     <div class="col-md">
         <form asp-action="Create">
@@ -16,6 +15,12 @@
                 <a class="btn btn-dark" asp-action="Index">Voltar</a>
             </div>
             <br />
+            <div hidden class="form-group col-md-6">
+                <input id="idCliente" asp-for="idCliente" class="form-control" />
+            </div>
+            <div hidden class="form-group col-md-6">
+                <input id="idLivro" asp-for="idLivro" class="form-control" />
+            </div>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="card">
                 <div class="card-header">Cliente</div>
@@ -41,7 +46,7 @@
                         <tbody>
                             @foreach (var item in Model.oListClientes)
                             {
-                                <tr>
+                                <tr onclick="pegarIdCliente('@item.Id')">
                                     <td>
                                         @Html.DisplayFor(modelItem => item.CliCpf)
                                     </td>
@@ -62,58 +67,68 @@
                     </table>
                 </div>
             </div>
-            <table id="livroTable" class="table">
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.oLivro.LivroNome)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.oLivro.LivroAutor)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.oLivro.LivroEditora)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.oLivro.LivroAnoPublicacao)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.oLivro.LivroEdicao)
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.oListLivros)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.LivroNome)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.LivroAutor)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.LivroEditora)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.LivroAnoPublicacao)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.LivroEdicao)
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-            <div class="form-group">
-                <label asp-for="dataEmprestimo" class="control-label"></label>
-                <input asp-for="dataEmprestimo" class="form-control" />
-                <span asp-validation-for="dataEmprestimo" class="text-danger"></span>
+            <div class="card mt-2">
+                <div class="card-header">Livro</div>
+                <div class="card-body">
+                    <table id="livroTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oLivro.LivroNome)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oLivro.LivroAutor)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oLivro.LivroEditora)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oLivro.LivroAnoPublicacao)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oLivro.LivroEdicao)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.oListLivros)
+                            {
+                                <tr onclick="pegarIdLivro('@item.Id')">
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LivroNome)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LivroAutor)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LivroEditora)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LivroAnoPublicacao)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LivroEdicao)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="dataEntrega" class="control-label"></label>
-                <input asp-for="dataEntrega" class="form-control" />
-                <span asp-validation-for="dataEntrega" class="text-danger"></span>
+            <div class="card mt-2">
+                <div class="card-header">Datas</div>
+                <div class="card-body row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="dataEmprestimo" class="control-label"></label>
+                        <input readonly="readonly" asp-for="dataEmprestimo" class="form-control" />
+                        <span asp-validation-for="dataEmprestimo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="dataEntrega" class="control-label"></label>
+                        <input asp-for="dataEntrega" class="form-control" />
+                        <span asp-validation-for="dataEntrega" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
             <br />
             <div class="form-group">
@@ -123,10 +138,60 @@
     </div>
 </div>
 
-
-
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+
+    <script>
+
+        // Tabela Cliente
+
+        let clienteTable = new DataTable('#clienteTable', {
+            language: {
+                url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json"
+            }
+        });
+
+        clienteTable.on('click', 'tbody tr', (e) => {
+            let classList = e.currentTarget.classList;
+
+            if (classList.contains('selected')) {
+                classList.remove('selected');
+            }
+            else {
+                clienteTable.rows('.selected').nodes().each((row) => row.classList.remove('selected'));
+                classList.add('selected');
+            }
+        });
+
+        // Tabela Livro
+
+        let livroTable = new DataTable('#livroTable', {
+            language: {
+                url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json"
+            }
+        });
+
+
+        livroTable.on('click', 'tbody tr', (e) => {
+            let classList = e.currentTarget.classList;
+
+            if (classList.contains('selected')) {
+                classList.remove('selected');
+            }
+            else {
+                livroTable.rows('.selected').nodes().each((row) => row.classList.remove('selected'));
+                classList.add('selected');
+            }
+        });
+
+        function pegarIdCliente(idCliente) {
+            document.getElementById('idCliente').value = idCliente;
+        }
+
+        function pegarIdLivro(idLivro) {
+            document.getElementById('idLivro').value = idLivro;
+        }
+    </script>
 }
