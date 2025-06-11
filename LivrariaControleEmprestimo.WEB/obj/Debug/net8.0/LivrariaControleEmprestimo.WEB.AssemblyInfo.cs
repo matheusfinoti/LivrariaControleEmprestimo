@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LivrariaControleEmprestimo.WEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7519139f864492c1092c73132f528e7100d54088")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+446cfa83fbd83316bf95c9a5ab861fcc577a575b")]
 [assembly: System.Reflection.AssemblyProductAttribute("LivrariaControleEmprestimo.WEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LivrariaControleEmprestimo.WEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
