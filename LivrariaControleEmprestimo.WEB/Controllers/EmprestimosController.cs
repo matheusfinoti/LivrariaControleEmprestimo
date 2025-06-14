@@ -52,5 +52,21 @@ namespace LivrariaControleEmprestimo.WEB.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            EmprestimoViewModel oEmprestimoViewModel = new EmprestimoViewModel();
+
+            oEmprestimoViewModel.oListLivros = _service.oRepositoryLivro.SelecionarTodos();
+            oEmprestimoViewModel.oListClientes = _service.oRepositoryCliente.SelecionarTodos();
+
+            LivroClienteEmprestimo oLivroClienteEmprestimo = _service.oRepositoryLivroClienteEmprestimo.SelecionarPk(id);
+            oEmprestimoViewModel.oLivroClienteEmprestimo = oLivroClienteEmprestimo;
+
+
+
+            return View(oEmprestimoViewModel);
+        }
     }
 }
