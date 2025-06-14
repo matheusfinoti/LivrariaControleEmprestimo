@@ -28,7 +28,7 @@ public partial class LivroClienteEmprestimo
 
 
     [Display(Name = "Entregue?")]
-    public bool? LceEntregue { get; set; }
+    public bool LceEntregue { get; set; }
 
     [ForeignKey("LceIdCliente")]
     [InverseProperty("LivroClienteEmprestimo")]
