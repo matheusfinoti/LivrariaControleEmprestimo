@@ -143,6 +143,7 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 
+    
     <script>
 
         // Tabela Cliente
@@ -165,8 +166,6 @@
             }
         });
 
-        $('#clienteTable tbody tr td').filter(":contains('" + @Model.oLivroClienteEmprestimo.LceIdCliente +"')")[0].parentElement.setAttribute('class', 'selected');
-
         // Tabela Livro
 
         let livroTable = new DataTable('#livroTable', {
@@ -188,17 +187,13 @@
             }
         });
 
-        $('#livroTable tbody tr td').filter(":contains('" + @Model.oLivroClienteEmprestimo.LceIdLivro +"')")[0].parentElement.setAttribute('class', 'selected');
+         function pegarIdCliente(idCliente) {
+             document.getElementById('idCliente').value = idCliente;
+         }
 
-
-
-        function pegarIdCliente(idCliente) {
-            document.getElementById('idCliente').value = idCliente;
-        }
-
-        function pegarIdLivro(idLivro) {
-            document.getElementById('idLivro').value = idLivro;
-        }
+         function pegarIdLivro(idLivro) {
+             document.getElementById('idLivro').value = idLivro;
+         }
     </script>
 
 }

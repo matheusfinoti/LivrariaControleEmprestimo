@@ -151,7 +151,7 @@
 
     <script>
 
-            // Tabela Cliente
+        // Tabela Cliente
 
         let clienteTable = new DataTable('#clienteTable', {
             language: {
@@ -170,6 +170,8 @@
                 classList.add('selected');
             }
         });
+
+        $('#clienteTable tbody tr td').filter(":contains('" + @Model.oLivroClienteEmprestimo.LceIdCliente +"')")[0].parentElement.setAttribute('class', 'selected');
 
         // Tabela Livro
 
@@ -191,6 +193,10 @@
                 classList.add('selected');
             }
         });
+
+        $('#livroTable tbody tr td').filter(":contains('" + @Model.oLivroClienteEmprestimo.LceIdLivro +"')")[0].parentElement.setAttribute('class', 'selected');
+
+
 
         function pegarIdCliente(idCliente) {
             document.getElementById('idCliente').value = idCliente;
