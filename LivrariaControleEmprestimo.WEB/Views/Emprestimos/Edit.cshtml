@@ -1,4 +1,4 @@
-﻿@model EmprestimoViewModel
+﻿@model LivrariaControleEmprestimo.WEB.Models.EmprestimoViewModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -20,7 +20,7 @@
                 <div class="card-header">Devolução</div>
                 <div class="card-body">
                     <div class="form-check">
-                        <input asp-for="oLivroClienteEmprestimo.LceEntregue" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input asp-for="oLivroClienteEmprestimo.LceEntregue" class="form-check-input" type="checkbox" value="true" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Entregue
                         </label>
@@ -28,7 +28,9 @@
                 </div>
             </div>
 
-            <br />
+            <div hidden class="form-group col-md-6">
+                <input asp-for="oLivroClienteEmprestimo.Id" class="form-control" />
+            </div>
             <div hidden class="form-group col-md-6">
                 <input id="idCliente" asp-for="oLivroClienteEmprestimo.LceIdCliente" class="form-control" />
             </div>
@@ -36,7 +38,7 @@
                 <input id="idLivro" asp-for="oLivroClienteEmprestimo.LceIdLivro" class="form-control" />
             </div>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="card">
+            <div class="card mt-2">
                 <div class="card-header">Cliente</div>
                 <div class="card-body">
                     <table id="clienteTable" class="table">
