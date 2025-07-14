@@ -8,7 +8,7 @@
 <h1>Empréstimos</h1>
 <br />
 <p>
-    <a class="btn btn-primary" type="button" value="Novo empréstimo" asp-action="Create">Novo empréstimo</a>
+    <a class="btn btn-primary" type="button" value="Novo empréstimo" asp-action="Create"><i class="fa fa-plus-circle"></i> Novo empréstimo</a>
 </p>
 <br />
 
@@ -43,14 +43,23 @@
             <tr>
                 @{
                     var styleStatus = "text-white bg-success";
-                    if (DateTime.Now.Date > item.LceDataEmprestimo)
+
+                    if (item.LceEntregue == true)
                     {
-                        styleStatus = "text-white bg-danger";
+                        styleStatus = "";
                     }
-                    else if (DateTime.Now.Date.Equals(item.LceDataEntrega))
+                    else
                     {
-                        styleStatus = "bg-warning";
+                        if (DateTime.Now.Date > item.LceDataEmprestimo)
+                        {
+                            styleStatus = "text-white bg-danger";
+                        }
+                        else if (DateTime.Now.Date.Equals(item.LceDataEntrega))
+                        {
+                            styleStatus = "bg-warning";
+                        }
                     }
+
                 }
                 <td>
                     @Html.DisplayFor(modelItem => item.LceDataEmprestimo)
@@ -72,12 +81,11 @@
                     @Html.DisplayFor(modelItem => item.LceEntregue)
                 </td>
                 <td>
-                    <a class="btn btn-success p-1" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                    <a class="btn btn-primary p-1" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a class="btn btn-success p-1" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit m-2"></i></a> |
 
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger p-1" data-toggle="modal" data-target="#DeleteModal-@item.Id">
-                        Excluir
+                        <i class="fa fa-trash m-2"></i>
                     </button>
 
                     <!-- Modal -->
@@ -91,7 +99,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    Deseja realmente excluir o cliente @item.CliNome?
+                                    Deseja realmente excluir este empréstimo?
                                 </div>
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Não</button>

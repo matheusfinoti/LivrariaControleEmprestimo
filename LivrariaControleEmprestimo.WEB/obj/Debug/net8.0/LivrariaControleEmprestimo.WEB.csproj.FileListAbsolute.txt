@@ -287,3 +287,9 @@ C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaContr
 C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.WEB\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.WEB\obj\Debug\net8.0\LivrariaControleEmprestimo.WEB.sourcelink.json
 C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.WEB\bin\Debug\net8.0\libman.json
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.WEB\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.WEB\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.WEB\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.WEB\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.WEB\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\m_finoti\source\repos\Livraria\LivrariaControleEmprestimo\LivrariaControleEmprestimo.WEB\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
