@@ -5,7 +5,9 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LivrariaControleEmprestimo.DATA", "LivrariaControleEmprestimo.DATA\LivrariaControleEmprestimo.DATA.csproj", "{40C99A29-C27A-4207-98A0-BE12797E878D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaControleEmprestimo.WEB", "LivrariaControleEmprestimo.WEB\LivrariaControleEmprestimo.WEB.csproj", "{CD665F7B-DECA-4CB9-8FAD-8A1EA940A2CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LivrariaControleEmprestimo.WEB", "LivrariaControleEmprestimo.WEB\LivrariaControleEmprestimo.WEB.csproj", "{CD665F7B-DECA-4CB9-8FAD-8A1EA940A2CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaControleEmprestimo.API", "LivrariaControleEmprestimo.API\LivrariaControleEmprestimo.API.csproj", "{4DCF6B38-C683-4C26-960E-1E244047830E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CD665F7B-DECA-4CB9-8FAD-8A1EA940A2CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD665F7B-DECA-4CB9-8FAD-8A1EA940A2CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD665F7B-DECA-4CB9-8FAD-8A1EA940A2CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DCF6B38-C683-4C26-960E-1E244047830E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DCF6B38-C683-4C26-960E-1E244047830E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DCF6B38-C683-4C26-960E-1E244047830E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DCF6B38-C683-4C26-960E-1E244047830E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

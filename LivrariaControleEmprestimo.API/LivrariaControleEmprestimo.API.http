@@ -1,0 +1,6 @@
+@LivrariaControleEmprestimo.API_HostAddress = http://localhost:5249
+
+GET {{LivrariaControleEmprestimo.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
